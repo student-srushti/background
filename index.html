@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+    button{
+        height: 10vh;
+        width: 10%;
+        border-radius: 50px;
+        border: 2px solid black;
+        margin-left: 8px;
+        margin-top: 30px;
+        
+    }
+</style>
+
+<body id="body">
+  <button onclick="fun('white')">White</button>
+  <button onclick="fun('black')">Black</button>
+  <button onclick="fun('green')">green</button>
+  <button onclick="fun('yellow')">yellow</button>
+  <br><br>
+  <h2>Choose your favorite color by clicking on button</h2>
+
+  <script>
+
+    function fun(value) {
+      let body = document.getElementById('body')
+
+      body.style.backgroundColor = value
+
+      if (value == 'black' || value == 'green') {
+        body.style.color = 'white'
+      }
+      else if (value == 'yellow' || value == 'white') {
+        body.style.color = 'black'
+      }
+    }
+  </script>
+
+</body>
+
+</html>
